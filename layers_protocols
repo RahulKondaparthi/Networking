@@ -1,0 +1,13 @@
+   Apllication layer       DHCP,DNS,                    ----\
+   
+   Presentation layer      Telnet,SSH,FTP                 ----   software layers
+   
+   Session layer            Sockets                     ----/
+ 
+   Transport layer          TCP,UDP                            --Heart of OSI
+    
+   Network layer            IP,RIP,NAT,ARP,ICMP          ----\
+   
+   Data layer               Ethernet,ARP,CDP,STP,MAC       ----   Hardware layers
+   
+   Physical layer           Ethernet_Physical,USB        ----/
