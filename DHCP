@@ -1,0 +1,12 @@
+Dynamic Host onfiguaration Protocol: Dynamically allocates Ip addresses
+-------------------------------------
+  1) Apllication layer protocol,used to provide
+                                                Subnet Mask 
+                                                Router Address 
+                                                DNS Address  
+                                                Vendor Class Identifier 
+  2)DHCP is based on a client-server model and based on discovery, offer, request, and ACK.(DORA)messages
+  
+  3)DHCP port number for server is 67 and for the client is 68. 
+    It is a Client server protocol which uses UDP services. IP address is assigned from a pool of addresses
+  
