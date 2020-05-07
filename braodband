@@ -1,2 +1,36 @@
 Baseband Transmission: A single signal consumes the whole bandwidth of the cable.
 Broadband Transmission: Multiple signals of multiple frequencies are sent simultaneously
+
+============================================================================================================================================
+Key elemnts of protocol:
+
+Syntax: It is the format of the data. That means in which order the data is displayed.
+Semantics: Describes the meaning of the bits in each section.
+Timing: At what time the data is to be sent and how fast it is to be sent.
+===========================================================================================================================================
+
+Q #55) What is an Encoder?
+
+Answer:  An encoder converts the analog signal into the digital signal.
+
+Q #56) What is a Decoder?
+
+Answer: It converts the digital signal into an analog signal.
+
+===========================================================================================================================================
+Q #54) Define Pipelining?
+
+Answer: In Networking, when a task is in progress another task gets started before the previous task is finished. This is termed as Pipelining.
+
+============================================================================================================================================
+Q #52) Explain Data Encapsulation?
+
+Answer: Encapsulation means adding one thing on top of the other thing. 
+When a message or a packet is passed through the communication network (OSI layers), every layer adds 
+its header information to the actual packet. 
+This process is termed as Data Encapsulation.
+
+Note: Decapsulation is exactly the opposite of encapsulation. 
+The process of removing the headers added by the OSI layers from the actual packet is termed as Decapsulation.
+
+==========================================================================================================================================
