@@ -1,0 +1,36 @@
+1. Is ARP request packet unicast, multicast or broadcast ?
+
+ARP request is a broadcast packet.
+
+2. Does ARP packets use IP header
+
+ARP does not use IP header. It is a layer 2 protocol.
+
+3. Can routers process ARP packets
+
+Yes, Routers can process Layer 2 and Layer 3 Packets.
+
+4. Which field in an ARP request header is blank / Null
+
+The target mac-address value is blank as the use of ARP request is to find the target mac-address.
+
+5. Does ARP requests in one VLAN reach another VLAN
+
+No. ARP request packets are broadcast. As VLAN’s segregate broadcast packets, broadcast packets from one VLAN does not reach another vlan.
+
+6. Is ARP packets initiated by the user or the operating system
+
+The operating system internally initiates ARP packets.
+
+7. Can ARP packets be used to find the mac-address of systems residing on different networks.
+
+No. ARP packets are layer 2 packets. They can be used only within a network.
+
+8. Does ARP reply packets contain IP address fields ?
+
+Yes they contain the sender and target IP address fields.
+
+9. What does a switch do when it receives a ARP request packet.
+
+It looks into the source mac-address value in the frame, adds it to its mac-address table and broadcasts the ARP packet to 
+all other ports as the packet is a broadcast packet.
