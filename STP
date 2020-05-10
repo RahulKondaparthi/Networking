@@ -1,0 +1,94 @@
+spanning tree protocol:
+=======================
+1)Spanning Tree Protocol (STP) was developed to prevent the broadcast storms caused by switching loops.
+
+2)Switches running STP will build a map or topology of the entire switching
+  nettwork. STP will identify if there are any loops, and then disable or block
+  as many ports as necessary to eliminate all loops in the topology. 
+  
+3)A blocked port can be reactivated if another port goes down. This allows
+  STP to maintain redundancy and fault-tolerance
+
+4)STP switches exchange Bridge Protocol Data Units (BPDU’s) to build the
+  topology database. BPDU’s are forwarded out all ports every two seconds,
+  to a dedicated MAC multicast address of 0180.c200.0000.
+
+5)Building the STP topology is a multistep convergence process:
+         • A Root Bridge is elected
+         • Root ports are identified
+         • Designated ports are identified
+         • Ports are placed in a blocking state as required, to eliminate loops
+
+ROOT BRIDGE:A Root Bridge is elected based on its Bridge ID, comprised of two
+===========  components in the original 802.1D standard:
+            • 16-bit Bridge priority
+            • 48-bit MAC address
+          The default priority is 32,768, and the lowest priority wins. If there is a tie
+          in priority, the lowest MAC address is used as the tie-breaker.
+  Note:By default, a switch will always believe it is the Root Bridge, until it
+       receives a BPDU from a switch with a lower Bridge ID. This is referred to
+       as a superior BPDU. The election process is continuous – if a new switch
+       with the lowest Bridge ID is added to the topology, it will be elected as the
+       Root Bridge		  
+
+Identfying ROOT PORTS:
+======================
+              The root port is to find the Root Bridge.
+              Each switch can only have one root port. The Root Bridge cannot have a root port.
+              The root port of each switch has the lowest root path cost to get to the Root Bridge.			  
+			  
+Identifying Designated Ports:
+============================= 
+              a)A single designated port is identified for each network segment. This
+              port is responsible for forwarding BPDUs and frames to that segment.
+			  
+			  b)every network segment must have one designated port,
+              regardless if a root port already exists on that segment.
+      
+	     Note:    Note: A port can never be both a designated port and a root port. 
+		 
+		 
+        Note:If two ports are eligible to become the designated port, then there is a loop.
+             One of the ports will be placed in a blocking state to eliminate the loop.	  
+			 
+STP PORT STATES:
+================
+• Blocking
+• Listening
+• Learning
+• Forwarding 
+
+• A blocking port will not forward frames or learn MAC addresses.
+• A blocking port will still listen for BPDUs from other switches, to
+learn about changes to the switching topology. 
+
+
+• A listening port will not forward frames or learn MAC addresses.
+• A listening port will send and listen for BPDUs, to participate in the
+election of the Root Bridge, root ports, and designated ports.
+• If a listening port is not elected as a root or a designated Port, it will
+transition back to a blocking state. 
+
+
+• A learning port will continue to send and listen for BPDUs.
+• A learning port will begin to add MAC addresses to the CAM table.
+• However, a learning port cannot forward frames quite yet. 
+
+
+• A forwarding port is fully functional – it will send and listen for
+BPDUs, learn MAC addresses, and forward frames.
+• Root and designated ports will eventually transition to a forwarding
+state. 
+
+disabled. A port in a disabled state
+has been administratively shutdown. A disabled port does not forward
+frames or participate in STP convergence. 
+			 
+			 
+			 
+			 
+			 
+			 
+			 Two implementations of RSTP exist:
+• Rapid Per-VLAN Spanning Tree Protocol (RPVST+)
+• Multiple Spanning Tree (MST) 
