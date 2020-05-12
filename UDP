@@ -1,0 +1,20 @@
+UDP-USer datagram Protocol:
+
+Connectionless
+ Does not guarantee delivery
+ Does not send acknowledgments
+ but faster than TCP
+ Does not provide sequencing
+ Does not resend dropped segments
+ Does not provide flow control
+ performs CRC on data
+ uses port numbers 
+ 
+ 
+
+Field                                               Length                                                               Description
+
+Source Port                                          16 bits                                                            Source UDP Port
+Destination Port                                     16 bits                                                            Destination UDP Port
+Length                                               16 bits                                             Length of the header and the data
+Checksum                                             16 bits                                                       Used for Error-Checking 
