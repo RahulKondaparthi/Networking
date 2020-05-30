@@ -1,0 +1,4 @@
+ The data unit created at the application layer is called a message,
+ at the transport layer the data unit created is called either a segment or an user datagram,
+ at the network layer the data unit created is called the datagram, 
+ at the data link layer the datagram is encapsulated in to a frame and finally transmitted as signals along the transmission media.
