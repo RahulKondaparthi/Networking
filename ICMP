@@ -1,0 +1,3 @@
+ICMP is Internet Control Message Protocol, a network layer protocol of the TCP/IP suite
+used by hosts and gateways to send notification of datagram problems back to the sender.
+It uses the echo test / reply to test whether a destination is reachable and responding. It also handles both control and error messages.
