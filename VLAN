@@ -1,0 +1,39 @@
+Virtual local area network:
+A switch can logically segemented into sperate braodcast domains using the VLASN's.
+  • Traffic between devices within the same VLAN is switched.
+  • Traffic between devices in different VLANs requires a Layer-3
+    device to communicate.
+ Broadcasts from one VLAN will not be forwarded to another VLAN
+ 
+ A VLAN-enabled switch supports two types of ports:
+• Access ports
+• Trunk ports
+
+ACCESSPORT :An access port is a member of only a single VLAN. Access ports are most
+often used to connect host devices, such as computers and printers.
+
+
+ There are two methods of connecting a VLAN across multiple switches:
+     • Create uplink access ports between the switches, one for each VLAN. 
+     • Create a trunk connection between the switches.
+     
+A trunk port is not a member of a single VLAN. The traffic from any or all
+VLANs can traverse trunk links to reach other switches. 
+
+VLAN Frame-Tagging :
+When VLANs span multiple switches, a mechanism is required to identify
+which VLAN a frame belongs to. This is accomplished through frame
+tagging, which places a VLAN ID in each frame.
+Tagging only occurs when a frame is sent out a trunk port. Traffic sent out
+access ports is never tagged. 
+
+Native Vlan:
+Native VLANs
+Recall that a trunk port tags frames with a VLAN ID. But what happens if a
+trunk port receives an untagged frame?
+The native VLAN determines the VLAN that untagged traffic belongs to.
+By default on all trunking ports, the native VLAN is VLAN 1. The native
+VLAN can be changed on a per trunk port basis:
+ Switch(config)# interface gi2/24
+ Switch(config-if)# switchport mode trunk
+ Switch(config-if)# switchport trunk native vlan 42
