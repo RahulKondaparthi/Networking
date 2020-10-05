@@ -1,8 +1,42 @@
 Basic Network types:
+--------------------
 1)LAN: A LAN is generally a high-speed network that covers a small geographic area, usually contained within a single building or campus. A LAN is
        usually under the administrative control of a single organization. Ethernet is the most common LAN technology
 2)WAN: WAN is a network that spans large geographical locations, usually to connect multiple LANs.WAN is a network that traverses a public or
        commercial carrier, using one of several WAN technologies
 
 Open sytem Interconnection(OSI):
+--------------------------------
+7 Application    : provides the interface between the user application and the network. A web browser and an email client are examples of user applications.ftp,telnet
+6 Presentation   : controls the formatting and syntax of user data for the application layer. This ensures that data from the sending application can be understood by the receiving application. 
+5 Session        :is responsible for establishing, maintaining,and ultimately terminating sessions between devices. If a session is broken,this layer can attempt to recover the session
+4 Transport (segments)
+                 :is responsible for the reliable transfer of data, by ensuring that data arrives at its destination error-free and in order(TCP,UDP)
+3 Network  (Packets)
+                 :controls internetwork communication,logical addressing and routing, (IP)
+2 Data-link (Frames)
+                 :the Data-Link layer (Layer-2) is responsible for transporting data within a network.(MAC and Logical link control)
+                  The Data-link layer packages the higher-layer data into frames, so that the
+                  data can be put onto the physical wire. This packaging process is referred to as framing or encapsulation. (rthernet)
+1 Physical (bits)
+                  : transferring of raw bits onto the physical medium.
+                  
+Ethernet:
+---------
+Ethernet is a technology that provides data link and physical specifications for controlling access across shared network medium.
+The Ethernet Frame:
+An Ethernet frame contains the following fields:
+Field                                                    Length                                                    Description
+Preamble                                                 7 bytes                                                 Synchronizes communication
+Start of Frame                                           1 byte                                                  Signals the start of a valid frame
+MAC Destination                                          6 bytes                                                 Destination MAC address
+MAC Source                                               6 bytes                                                 Source MAC address
+802.1Q tag                                               4 bytes                                                 Optional VLAN tag
+Ethertype or length                                      2 bytes                                                 Payload type or frame size
+Payload                                                  42-1500 bytes                                           Data payload
+CRC                                                      4 bytes                                                 Frame error check
+Interframe Gap                                           12 bytes                                                Required idle period between fram
+
+
+
 
