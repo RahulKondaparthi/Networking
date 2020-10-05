@@ -37,6 +37,23 @@ Payload                                                  42-1500 bytes          
 CRC                                                      4 bytes                                                 Frame error check
 Interframe Gap                                           12 bytes                                                Required idle period between fram
 
+Layer-2 Switching:
+------------------
+Layer-2 devices build hardware address tables, which at a minimum contain the following:
+• Hardware addresses for hosts
+• The port each hardware address is associated with
+• Hardware address learning
+• Intelligent forwarding of frames
+• Loop avoidance 
+
+Layer-2 devices will make intelligent forwarding decisions based on the frame (or data-link) headers. A frame can then be forwarded out only the appropriate destination port,
+instead of all ports.
+Ethernet switches build MAC address tables through a dynamic learning process.Switches always learn from the source MAC address in a frame.
 
 
+Spanning tree Protocol:
+-----------------------
+A Layer-2 switch belongs to only one broadcast domain, and will forward both broadcasts and multicasts out every port but the originating port. 
+When a switching loop is introduced into the network,broadcast storm will develop within seconds.
 
+Spanning Tree Protocol (STP) was developed to prevent the broadcast storms caused by switching loops. 
