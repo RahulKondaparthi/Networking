@@ -1,0 +1,8 @@
+Basic Network types:
+1)LAN: A LAN is generally a high-speed network that covers a small geographic area, usually contained within a single building or campus. A LAN is
+       usually under the administrative control of a single organization. Ethernet is the most common LAN technology
+2)WAN: WAN is a network that spans large geographical locations, usually to connect multiple LANs.WAN is a network that traverses a public or
+       commercial carrier, using one of several WAN technologies
+
+Open sytem Interconnection(OSI):
+
